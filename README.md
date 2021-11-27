@@ -1,3 +1,5 @@
+[![Go Reference](https://pkg.go.dev/badge/github.com/bennydictor/canonical.svg)](https://pkg.go.dev/github.com/bennydictor/canonical)
+
 ## What are canonical tests?
 
 That's when instead of comparing the expected and actual values in code:
