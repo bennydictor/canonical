@@ -31,13 +31,12 @@ Add `canonical.json` to your version control system.
 Also, there's an [example](example).
 
 ## How do I assert multiple values?
-There must be at most one call to `Assert` or `Require` per test. If you want to assert multiple values,
-you will have to pass in multiple values:
+There must be at most one call to `Assert` or `Require` per test. Assert multiple values like this:
 ```go
 canonical.Assert(t, foo, bar, baz)
 ```
 
-Or like that:
+Or like this:
 ```go
 canonical.Assert(t, map[string]interface{}{
 	"foo": foo,
