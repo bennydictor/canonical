@@ -135,7 +135,7 @@ func Require(t *testing.T, values ...interface{}) {
 	}
 }
 
-// Error - canonical form of an error.
+// Error returns the canonical form of an `error`.
 func Error(err error) interface{} {
 	if err == nil {
 		return nil
