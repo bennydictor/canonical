@@ -72,8 +72,7 @@ func mustMarshal(t *testing.T, v interface{}) string {
 // Assert asserts that the provided value matches the canonical value.
 func Assert(t *testing.T, values ...interface{}) bool {
 	if len(values) == 0 {
-		t.Log("canonical.Assert of no values")
-		return false
+		t.Fatal("canonical.Assert of no values")
 	}
 
 	var value interface{}
@@ -97,6 +96,7 @@ func Assert(t *testing.T, values ...interface{}) bool {
 		canonicalValue, ok := canonicalValues[t.Name()]
 		if !ok {
 			t.Log("did not find canonical value")
+			t.Fail()
 			return false
 		}
 
